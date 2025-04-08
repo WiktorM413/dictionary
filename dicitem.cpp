@@ -22,6 +22,16 @@ DicItem::DicItem(QString original, QString translation)
     });
 
 }
+
+// USED ONLY FOR CONVERTING THE CONVERTED DICITEM!!!
+DicItem::DicItem(QWidget* line)
+{
+    this->erase = static_cast<QPushButton*>(line->children().at(0));
+    this->original = static_cast<QLabel*>(line->children().at(1));
+    this->translation = static_cast<QLabel*>(line->children().at(2));
+    this->index = static_cast<DicItem>(line).getIndex();
+}
+
 DicItem::~DicItem()
 {
     emit objectDeleted(index);

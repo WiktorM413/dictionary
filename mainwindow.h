@@ -18,6 +18,7 @@ class MainWindow : public QMainWindow
 
 public:
     std::map<unsigned int, DicItem*> items;
+    std::map<unsigned int, DicItem*> currentList;
 
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -25,6 +26,8 @@ public:
 private slots:
     void on_add_clicked();
     void erase_not_wanted(const unsigned int i);
+
+    void on_search_clicked();
 
 private:
     Ui::MainWindow *ui;

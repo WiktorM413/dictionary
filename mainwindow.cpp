@@ -50,6 +50,13 @@ void MainWindow::erase_not_wanted(const unsigned int i)
 
 void MainWindow::on_search_clicked()
 {
+    if (ui->searchInput->text().isEmpty())
+    {
+        currentList = items;
+        return;
+    }
+    QList<DicItem*> dicList;
+
 
 }
 

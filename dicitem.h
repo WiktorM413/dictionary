@@ -18,6 +18,7 @@ private:
 
 public:
     DicItem(QString original, QString translation);
+    DicItem(QWidget* line);
     ~DicItem();
     explicit operator QWidget*();
     unsigned int getIndex();
