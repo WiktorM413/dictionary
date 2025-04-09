@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 
@@ -59,9 +58,13 @@ void MainWindow::on_search_clicked()
     QList<DicItem*> dicList;
     for (auto& item : items)
     {
-
+        if (item.second->getOriginal()->text().contains(ui->searchInput->text()) ||
+            item.second->getTranslation()->text().contains(ui->searchInput->text()))
+        {
+            dicList.push_back(item.second);
+            qDebug() << item.second->getTranslation()->text();
+        }
     }
-
 
 }
 
