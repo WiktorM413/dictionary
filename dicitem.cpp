@@ -66,3 +66,12 @@ unsigned int DicItem::getIndex()
     return index;
 }
 
+QLabel* DicItem::getOriginal()
+{
+    return original;
+}
+
+QLabel* DicItem::getTranslation()
+{
+    return translation;
+}

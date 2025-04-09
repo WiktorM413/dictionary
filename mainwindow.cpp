@@ -55,7 +55,12 @@ void MainWindow::on_search_clicked()
         currentList = items;
         return;
     }
+
     QList<DicItem*> dicList;
+    for (auto& item : items)
+    {
+
+    }
 
 
 }

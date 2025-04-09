@@ -22,6 +22,8 @@ public:
     ~DicItem();
     explicit operator QWidget*();
     unsigned int getIndex();
+    QLabel* getOriginal();
+    QLabel* getTranslation();
 
 signals:
     void objectDeleted(const unsigned int i);
