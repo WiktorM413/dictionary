@@ -12,11 +12,10 @@ class SearchResult : public QMainWindow
 {
     Q_OBJECT
 private:
-    const QList<DicItem*>* dicList;
+    QList<DicItem*>* dicList;
 
 public:
-    SearchResult(const QList<DicItem*>* list);
-    explicit SearchResult(QWidget *parent = nullptr);
+    explicit SearchResult(QList<DicItem*>* list, QWidget *parent = nullptr);
     ~SearchResult();
 
 private:

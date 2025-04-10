@@ -1,17 +1,22 @@
 #include "searchresult.h"
 #include "ui_searchresult.h"
 
-SearchResult::SearchResult(QWidget *parent)
+SearchResult::SearchResult(QList<DicItem*>* list, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::SearchResult)
 {
     ui->setupUi(this);
-}
+    dicList = new QList<DicItem*>();
 
-SearchResult::SearchResult(const QList<DicItem*>* list): dicList(list)
-{
-    ui->setupUi(this);
-    ui->centralwidget->layout()->setAlignment(Qt::AlignTop);
+    for (int i = 0; i < list->length(); i++)
+    {
+        dicList->push_back(list->at(i)->copy());
+    }
+
+    for (int i = 0; i < dicList->length(); i++)
+    {
+        ui->result->addWidget(static_cast<QWidget*>(*dicList->at(i)));
+    }
 }
 
 SearchResult::~SearchResult()

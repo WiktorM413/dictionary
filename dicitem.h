@@ -17,6 +17,7 @@ private:
     QPushButton* erase;
 
 public:
+
     DicItem(QString original, QString translation);
     DicItem(QWidget* line);
     ~DicItem();
@@ -24,6 +25,7 @@ public:
     unsigned int getIndex();
     QLabel* getOriginal();
     QLabel* getTranslation();
+    DicItem* copy();
 
 signals:
     void objectDeleted(const unsigned int i);

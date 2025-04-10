@@ -75,3 +75,9 @@ QLabel* DicItem::getTranslation()
 {
     return translation;
 }
+
+DicItem* DicItem::copy()
+{
+    DicItem* cp = new DicItem(this->original->text(), this->translation->text());
+    return cp;
+}
