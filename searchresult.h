@@ -15,7 +15,7 @@ private:
     QList<DicItem*>* dicList;
 
 public:
-    explicit SearchResult(QList<DicItem*>* list, QWidget *parent = nullptr);
+    explicit SearchResult(QList<DicItem*>* list, QMainWindow* ths, QWidget *parent = nullptr);
     ~SearchResult();
 
 private:

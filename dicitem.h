@@ -1,6 +1,7 @@
 #ifndef DICITEM_H
 #define DICITEM_H
 
+
 #include <QLabel>
 #include <QPushButton>
 #include <QHBoxLayout>
@@ -14,9 +15,9 @@ private:
     unsigned int index;
     QLabel* original;
     QLabel* translation;
-    QPushButton* erase;
 
 public:
+    QPushButton* erase;
 
     DicItem(QString original, QString translation);
     DicItem(QWidget* line);
